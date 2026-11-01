@@ -1,0 +1,12 @@
+﻿=== diag 2026-11-01T10:22:47.5464987+08:00 ===
+[1] 鏋氫妇 PowerSwitchInterface 瀹炰緥
+    InstanceName = ACPI\PNP0C14\IP3POWERSWITCH_0   Active=True
+[ERR] PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH_0'  -> 无法将值“root\WMI:PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH_0'”转换为类型“System.Management.ManagementClass”。错误:“指定的参数已超出有效值的范围。
+参数名: path”
+[ERR] PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH'  -> 无法将值“root\WMI:PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH'”转换为类型“System.Management.ManagementClass”。错误:“指定的参数已超出有效值的范围。
+参数名: path”
+[ERR] PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH_0'  -> 无法将值“root\WMI:PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH_0'”转换为类型“System.Management.ManagementClass”。错误:“指定的参数已超出有效值的范围。
+参数名: path”
+[ERR] PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH'  -> 无法将值“root\WMI:PowerSwitchInterface.InstanceName='ACPI\PNP0C14\IP3POWERSWITCH'”转换为类型“System.Management.ManagementClass”。错误:“指定的参数已超出有效值的范围。
+参数名: path”
+=== done ===

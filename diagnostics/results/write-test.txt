@@ -1,0 +1,9 @@
+﻿=== write-test 2026-11-01T10:40:18.6316152+08:00 ===
+原始模式 = 1
+SetPowerMode(0) -> ResultStatus=0  ReturnValue=True  回读=0
+SetPowerMode(1) -> ResultStatus=0  ReturnValue=True  回读=0
+SetPowerMode(2) -> ResultStatus=0  ReturnValue=True  回读=1
+SetFanControl(duty=100) -> ResultStatus=0  ReturnValue=True  RPM=1722
+SetFanControl(duty=101) -> ResultStatus=0  ReturnValue=True  RPM=1889
+恢复模式 1 -> ResultStatus=0  回读=2
+=== done ===

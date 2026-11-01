@@ -1,0 +1,24 @@
+﻿=== fast-return-test 2026-11-01T10:49:40.4529130+08:00 ===
+--- 1) 满转 100，等 10 秒
+    起点 rpm=3704  temp=35
+--- 2) 快速回自动：先写 duty=40（按温度查表），1 秒后写 101
+    101 ResultStatus=0 ReturnValue=True
+--- 3) 交回后每 5 秒采样，看多久落到 ~2200 以下
+    +  6s  rpm=3654  temp=36
+    + 11s  rpm=3599  temp=38
+    + 16s  rpm=3523  temp=34
+    + 21s  rpm=3450  temp=33
+    + 26s  rpm=3374  temp=33
+    + 31s  rpm=3302  temp=32
+    + 36s  rpm=3237  temp=34
+    + 41s  rpm=3161  temp=36
+    + 46s  rpm=3075  temp=36
+    + 51s  rpm=2982  temp=40
+    + 56s  rpm=2902  temp=38
+    + 61s  rpm=2803  temp=34
+    + 66s  rpm=2708  temp=37
+    + 71s  rpm=2616  temp=34
+    + 76s  rpm=2516  temp=33
+    + 81s  rpm=2414  temp=32
+    >>> 80 秒内未降到 2250
+=== done ===

@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- 托盘图标需要 NotifyIcon；与 UseWPF 并存，代码里用全限定名避免类型冲突 -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MiniProLite</RootNamespace>
+    <AssemblyName>MiniProLite</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- exe 文件本身的 Win32 图标（资源管理器/任务栏） -->
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <!-- 仓库根目录的 Directory.Build.props 会注入 0.1.0，本工具独立发版，显式覆盖 -->
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WinForms 会隐式引入 System.Windows.Forms / System.Drawing，与 WPF 的同名类型冲突，这里移除；
+         托盘代码里全部用全限定名 -->
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 同一个 ico 再进 WPF 资源（pack URI），供 MainWindow.Icon 与托盘经
+         Application.GetResourceStream("app.ico") 读取；ApplicationIcon 只写 Win32 资源 -->
+    <Resource Include="app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- WMI 访问必须用 System.Management（.NET 9 运行时未内置），版本与仓库其它工程保持一致 -->
+    <PackageReference Include="System.Management" Version="9.0.10" />
+  </ItemGroup>
+
+</Project>

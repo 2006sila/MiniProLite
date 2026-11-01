@@ -1,0 +1,10 @@
+# 构建 / 发布产物
+build/
+dist/
+bin/
+obj/
+
+# IDE
+.vs/
+*.user
+*.suo
